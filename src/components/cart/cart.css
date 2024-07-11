@@ -3,6 +3,7 @@
   padding: 20px;
   height: max-content;
   border-radius: 20px;
+  margin-top: 20px;
 }
 .cart {
   background-color: var(--clr-white);
@@ -95,4 +96,16 @@
   border-radius: 30px;
   margin-bottom: 40px;
   cursor: pointer;
+}
+.empty {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a2908c;
+  font-weight: 500;
+}
+.empty img {
+  width: 200px;
 }
