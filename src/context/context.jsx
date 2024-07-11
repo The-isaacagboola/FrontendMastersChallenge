@@ -1,23 +1,26 @@
 /* eslint-disable react/prop-types */
 import { createContext, useState } from "react";
 
-export const CartContext = createContext();
+export const GlobalContext = createContext(null);
 
-export default function GlobalContext({ children }) {
-  const [cartArray, setCartArray] = useState([]);
+export default function GlobalState({ children }) {
+  const [cartList, setCartList] = useState([]);
 
-  function handleProduct(product) {
-    if (cartArray.indexOf(product) !== -1) {
-      return;
-    } else {
-      cartArray.push(product);
-      console.log(cartArray);
+  function addToCart(product) {
+    const copyCartList = [...cartList];
+
+    const index = copyCartList.findIndex((item) => item.name === product.name);
+
+    if (index === -1) {
+      copyCartList.push(product);
     }
+
+    setCartList(copyCartList);
   }
 
   return (
-    <CartContext.Provider value={[cartArray, setCartArray, handleProduct]}>
+    <GlobalContext.Provider value={{ cartList, setCartList, addToCart }}>
       {children}
-    </CartContext.Provider>
+    </GlobalContext.Provider>
   );
 }
