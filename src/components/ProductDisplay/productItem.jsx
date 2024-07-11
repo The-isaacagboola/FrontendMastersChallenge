@@ -1,29 +1,16 @@
 /* eslint-disable react/prop-types */
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import addtocart from "../../assets/images/icon-add-to-cart.svg";
 import { CartContext } from "../../context/context";
 
 export default function ProductItem({ product }) {
-  const [productArray, setProductArray] = useState([]);
   const image = product.image.desktop;
 
   const contextItems = useContext(CartContext);
-  const [cartArray, setCartArray] = contextItems;
 
-  useEffect(() => {
-    setProductArray([...cartArray]);
-  }, []);
+  const [cartArray, setCartArray, handleProduct] = contextItems;
 
-  console.log(productArray);
-
-  function handleProduct(product) {
-    if (productArray.indexOf(product) !== -1) {
-      return;
-    } else {
-      productArray.push(product);
-      console.log(productArray);
-    }
-  }
+  console.log(cartArray, setCartArray);
 
   return (
     <div className="product">
