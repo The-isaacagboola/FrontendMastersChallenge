@@ -1,0 +1,13 @@
+.cart-section {
+  padding: 20px;
+}
+.cart {
+  background-color: var(--clr-white);
+  border-radius: 10px;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.cart h2 {
+  color: var(--clr-orange);
+}

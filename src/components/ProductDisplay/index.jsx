@@ -4,7 +4,7 @@ import "./products.css";
 
 export default function ProductsDisplay({ products }) {
   return (
-    <div>
+    <div className="product-container">
       {products && products.length
         ? products.map((product, id) => (
             <ProductItem product={product} key={id} />

@@ -1,0 +1,62 @@
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.product {
+  display: grid;
+  grid-template-rows: 0.6fr 0.4fr;
+  width: 280px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product .image {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr) repeat(2, 20px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.product .image img {
+  border-radius: 10px;
+  grid-area: 1 / 1 / 5 / 6;
+}
+.product .image button {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--clr-white);
+  grid-area: 4 / 2 / 6 / 5;
+  border: 1px solid var(--clr-ash);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.product .image button:hover {
+  border: 1px solid var(--clr-orange);
+  color: var(--clr-orange);
+}
+.details {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.details :first-child {
+  color: var(--clr-ash);
+  font-weight: 400;
+}
+
+.details :nth-child(2) {
+  font-weight: 600;
+}
+.details :last-child {
+  color: var(--clr-orange);
+  font-weight: 500;
+}

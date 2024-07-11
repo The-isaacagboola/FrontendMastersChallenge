@@ -3,6 +3,8 @@ import "./App.css";
 import ProductsDisplay from "./components/ProductDisplay";
 import "./data.json";
 import { useEffect } from "react";
+import Cart from "./components/cart/cart";
+import GlobalContext from "./context/context";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -18,12 +20,18 @@ function App() {
   }, []);
 
   return (
-    <div className="project">
-      <div>
-        <h1>Desserts</h1>
-        <ProductsDisplay products={products} />
+    <GlobalContext>
+      <div className="bg">
+        <div className="project">
+          <div className="product-section">
+            <h1>Desserts</h1>
+            <ProductsDisplay products={products} />
+          </div>
+
+          <Cart />
+        </div>
       </div>
-    </div>
+    </GlobalContext>
   );
 }
 
