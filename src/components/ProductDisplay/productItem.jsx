@@ -5,15 +5,16 @@ import "../../assets/images/image-brownie-desktop.jpg";
 import { GlobalContext } from "../../context/context";
 
 export default function ProductItem({ product }) {
-  const image = product.image.desktop;
-
   const { addToCart, checkPresent, incrementQuantity, decrementQuantity } =
     useContext(GlobalContext);
 
   return (
     <div className="product">
       <div className="image">
-        <img src={`../../../src/${image.desktop}`} alt="product image" />
+        <img
+          src={`../../../src/${product.image.desktop}`}
+          alt="product image"
+        />
         <button
           className={checkPresent(product) ? "present" : null}
           onClick={() => {
