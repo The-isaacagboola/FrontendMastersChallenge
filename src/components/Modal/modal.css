@@ -1,0 +1,79 @@
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #270f0b71;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+}
+.modal-content {
+  width: 30%;
+  background-color: var(--clr-white);
+  padding: 40px;
+  border-radius: 10px;
+}
+.modal-content h1 {
+  margin: 10px 0;
+}
+.modal-content > p {
+  color: var(--clr-ash);
+  margin-bottom: 30px;
+}
+.purchase {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 30px;
+  font-size: 1rem;
+  padding: 20px;
+  background-color: #fcf8f5;
+}
+.purchase .summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.purchase .summary .first-half {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.purchase .summary .first-half > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+.text p {
+  display: flex;
+  gap: 17px;
+  color: var(--clr-ash);
+}
+.text p span:first-child {
+  color: var(--clr-orange);
+}
+.summary .subtotal {
+  font-weight: 500;
+}
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-total h3 {
+  font-size: 2rem;
+  font-size: 600;
+}
+.restart {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--clr-orange);
+  font-weight: 500;
+}

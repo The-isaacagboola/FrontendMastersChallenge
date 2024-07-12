@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./cart.css";
 import { GlobalContext } from "../../context/context";
 import CartItem from "./cartItem";
 import carbonImg from "../../assets/images/icon-carbon-neutral.svg";
 import emptyCartImg from "../../assets/images/illustration-empty-cart.svg";
+import Modal from "../Modal/modal";
 
 function EmptyCart() {
   return (
@@ -17,6 +18,8 @@ function EmptyCart() {
 }
 
 function UnemptyCart({ copyCartList }) {
+  const [openModal, setOpenModal] = useState(false);
+
   function totalPrice() {
     const total = copyCartList.reduce(
       (acc, item) => (acc += item.price * item.quantity),
@@ -46,7 +49,13 @@ function UnemptyCart({ copyCartList }) {
         </p>
       </div>
 
-      <button>Confirm Order</button>
+      <Modal
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+        totalPrice={totalPrice}
+      />
+
+      <button onClick={() => setOpenModal(true)}>Confirm Order</button>
     </div>
   );
 }
