@@ -10,13 +10,10 @@ export default function ProductItem({ product }) {
   const { addToCart, checkPresent, incrementQuantity, decrementQuantity } =
     useContext(GlobalContext);
 
-  //make 2 methods in the context page ; Increment quantity and decrement quantity
-  //it takes in the product as param and increase or decrease its quantity
-
   return (
     <div className="product">
       <div className="image">
-        <img src={`./src/${image}`} alt="product image" />
+        <img src={`../../${image}`} alt="product image" />
         <button
           className={checkPresent(product) ? "present" : null}
           onClick={() => {
