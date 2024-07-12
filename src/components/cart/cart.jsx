@@ -17,6 +17,14 @@ function EmptyCart() {
 }
 
 function UnemptyCart({ copyCartList }) {
+  function totalPrice() {
+    const total = copyCartList.reduce(
+      (acc, item) => (acc += item.price * item.quantity),
+      0
+    );
+    return total.toFixed(2);
+  }
+
   return (
     <div>
       <div>
@@ -27,7 +35,7 @@ function UnemptyCart({ copyCartList }) {
 
       <p className="total">
         <span>Order Total</span>
-        <span>$46.50</span>
+        <span>${totalPrice()}</span>
       </p>
 
       <div className="carbon">

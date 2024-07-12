@@ -10,7 +10,6 @@
   grid-template-rows: 0.6fr 0.4fr;
   width: 280px;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .product .image {
@@ -19,6 +18,12 @@
   grid-template-rows: repeat(3, 1fr) repeat(2, 20px);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+}
+.product .image:hover img:first-child {
+  scale: 105%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 .product .image img {
   border-radius: 10px;
@@ -29,6 +34,7 @@
   padding: 10px;
   justify-content: center;
   align-items: center;
+  z-index: 10;
   gap: 10px;
   background-color: var(--clr-white);
   grid-area: 4 / 2 / 6 / 5;
@@ -42,6 +48,29 @@
   border: 1px solid var(--clr-orange);
   color: var(--clr-orange);
 }
+.product .image button.present {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  color: var(--clr-white);
+  background-color: var(--clr-orange);
+}
+.product .image button.present .qty-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 4px;
+}
+.product .image button.present .qty-btns span {
+  font-size: 1rem;
+}
+
 .details {
   margin-top: 15px;
   display: flex;
