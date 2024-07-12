@@ -3,6 +3,7 @@ import { useContext } from "react";
 import "./modal.css";
 import { GlobalContext } from "../../context/context";
 import check from "../../assets/images/icon-order-confirmed.svg";
+// import { createPortal } from "react-dom";
 
 function ItemRender({ item }) {
   return (
