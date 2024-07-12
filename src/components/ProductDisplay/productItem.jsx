@@ -13,7 +13,7 @@ export default function ProductItem({ product }) {
   return (
     <div className="product">
       <div className="image">
-        <img src={`../../${image}`} alt="product image" />
+        <img src={`../../../src/${image}`} alt="product image" />
         <button
           className={checkPresent(product) ? "present" : null}
           onClick={() => {
