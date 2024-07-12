@@ -8,7 +8,7 @@ function ItemRender({ item }) {
   return (
     <div className="summary">
       <div className="first-half">
-        <img src={`../../../src/${item.image.mobile}`} alt="food image" />
+        <img src={item.image.thumbnail} alt="food image" />
         <div className="text">
           <h4>{item.name}</h4>
           <p>

@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import addtocart from "../../assets/images/icon-add-to-cart.svg";
-import "../../assets/images/image-brownie-desktop.jpg";
 import { GlobalContext } from "../../context/context";
 
 export default function ProductItem({ product }) {
@@ -11,10 +10,7 @@ export default function ProductItem({ product }) {
   return (
     <div className="product">
       <div className="image">
-        <img
-          src={`../../../src/${product.image.desktop}`}
-          alt="product image"
-        />
+        <img src={product.image.desktop} alt="product image" />
         <button
           className={checkPresent(product) ? "present" : null}
           onClick={() => {

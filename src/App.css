@@ -29,6 +29,13 @@ body {
     justify-content: space-between;
   }
 }
+
+@media (max-width: 1430px) {
+  .modal-content {
+    width: 40% !important;
+  }
+}
+
 @media (max-width: 1330px) {
   .project {
     grid-template-columns: 1fr;
@@ -48,7 +55,16 @@ body {
   }
 }
 
+@media (max-width: 1040) {
+  .modal-content {
+    width: 50% !important;
+  }
+}
+
 @media (max-width: 845px) {
+  .modal-content {
+    width: 60% !important;
+  }
   .product-section {
     padding: 0;
   }
@@ -61,6 +77,9 @@ body {
 }
 
 @media (max-width: 673px) {
+  .modal-content {
+    width: 80% !important;
+  }
   .product-section h1 {
     text-align: center;
   }
@@ -89,5 +108,12 @@ body {
   .product {
     width: 100% !important;
     max-width: 350px;
+  }
+}
+@media (max-width: 450px) {
+  .modal-content {
+    width: 100% !important;
+    bottom: 0;
+    position: absolute;
   }
 }
