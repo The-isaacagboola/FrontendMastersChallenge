@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/The-isaacagboola/FrontendMastersChallenge)
-- Live Site URL: [Add live site URL here](https://frontend-masters-challenge-nrzm.vercel.app/)
+- Solution URL: [My Solution on Github](https://github.com/The-isaacagboola/FrontendMastersChallenge)
+- Live Site URL: [Live site on Vercel](https://frontend-masters-challenge-nrzm.vercel.app/)
 
 ### Built with
 
